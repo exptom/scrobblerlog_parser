@@ -12,8 +12,14 @@
 
 namespace ScrobblerLog;
 
-use Exception;
-
-class ParserException extends Exception
+class LoggedTrack
 {
-} 
+	public $artistName;
+	public $albumName;
+	public $trackName;
+	public $trackAlbumPosition;
+	public $trackDuration;
+	public $skipped = false;
+	public $listenTime;
+	public $musicBrainzID;
+}
