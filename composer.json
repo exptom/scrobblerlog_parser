@@ -1,0 +1,30 @@
+{
+	"name": "exptom/scrobbler-log",
+	"description": "A library to parse audioscrobbler log files produced by Rockbox and other devices",
+	"license": "MIT",
+	"homepage": "https://github.com/exptom/scrobblerlog_parser/",
+	"type": "library",
+	"keywords":["audioscrobbler","scrobbling","last.fm","rockbox"],
+	"authors":[
+		{
+			"name": "Tom Ford",
+			"email": "code@bitvark.com",
+			"role": "Developer",
+			"homepage": "https://github.com/exptom/"
+		}
+	],
+	
+	"require":
+	{
+		"php": ">=5.3.3"
+	},
+	
+	"autoload":
+	{
+		"psr-0":
+		{
+			"ScrobblerLog\\": "src/ScrobblerLog/"
+		}
+	}
+	
+}
