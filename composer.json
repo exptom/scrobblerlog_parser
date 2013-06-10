@@ -23,7 +23,7 @@
 	{
 		"psr-0":
 		{
-			"ScrobblerLog\\": "src/ScrobblerLog/"
+			"ScrobblerLog\\": "src/"
 		}
 	}
 	
