@@ -116,6 +116,42 @@ class Parser
 	}
 	
 	/**
+	 * Get the total number of tracks logged in this scrobbler.log file
+	 * @return int
+	 */
+	public function getTotalTracksLogged()
+	{
+		return $this->totalTracks;
+	}
+	
+	/**
+	 * Get the total number of tracks played in this scrobbler.log file
+	 * @return int
+	 */
+	public function getTotalTracksPlayed()
+	{
+		return $this->tracksPlayed;
+	}
+	
+	/**
+	 * Get the total number of tracks skipped in this scrobbler.log file
+	 * @return int
+	 */
+	public function getTotalTracksSkipped()
+	{
+		return $this->tracksSkipped;
+	}
+	
+	/**
+	 * Get the total play time in seconds of all the played tracks in this scrobbler.log file
+	 * @return int Time in seconds
+	 */
+	public function getTotalPlayTime()
+	{
+		return $this->totalTrackLength;
+	}
+	
+	/**
 	 * Parse the header part of the scrobbler log file.
 	 * The header part is the first 3 lines containing log format version, log timezone and name of the client that generated the log file.
 	 */
@@ -269,9 +305,10 @@ class Parser
 		if($track->skipped === true)
 			$this->tracksSkipped++;
 		else
+		{
 			$this->tracksPlayed++;
-		
-		$this->totalTrackLength += $track->trackDuration;
+			$this->totalTrackLength += $track->trackDuration;
+		}
 	}
 	
 }
